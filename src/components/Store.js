@@ -4,8 +4,6 @@ import { useSelector , useDispatch } from 'react-redux';
 //component
 import Product from './shared/Product';
 
-//context
-// import {ProductsContext} from "../contex/ProductsContexProvider";
 //css 
 import styles from '../components/Store.module.css';
 
@@ -23,19 +21,6 @@ const Store = () => {
  if(!productState.products.length) dispatch(fetchProducts());
  },[])
 
-
-  //   const products=useContext(ProductsContext);
-  //   const [search , setSearch]=useState("");
-  //   const[productsData,setProductsData]=useState([]);
-  
-  //   useEffect(()=>
-  //   setProductsData(products),
-  //   [products]);
-  // const searchHandeler= event=>{
-  //      setSearch(event.target.value);
-  // }
-   
-  // const searchProduct=productsData.filter(product => product.title.toLowerCase().includes(search.toLowerCase()));
   return (
     <div className={styles.container}>
 
@@ -46,7 +31,8 @@ const Store = () => {
       <p>Something went wrong </p> :
       productState.products.map(product => <Product 
 
-       
+        key={product.id} 
+        productData={product}
       />)
     }
 

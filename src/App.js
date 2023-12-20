@@ -1,4 +1,4 @@
-import { Route ,Routes , Navigate, RouterProvider} from "react-router-dom";
+import { Route ,Routes , Navigate} from "react-router-dom";
 import { Provider } from "react-redux";
 
 import store from "./redux/store";
@@ -13,14 +13,18 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import NotFound from "./components/NotFound";
+import Slider from "./components/slider/Slider";
+
+
 
 
 function App() {
   return (
 
   
-  <RouterProvider store={store}>
+  <Provider store={store}>
         <Navbar />
+        <Slider/>
         <Routes>
           <Route path="/products" element={<Store/>} />
           <Route path="/*" element={<Navigate to="/products"/>} />
@@ -35,7 +39,7 @@ function App() {
           <Route path="/github" element={<AboutUs />} />
          </Routes>
          <Footer/> 
-     </RouterProvider>
+     </Provider>
 
   
   );
