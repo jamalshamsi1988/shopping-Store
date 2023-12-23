@@ -1,7 +1,7 @@
-import First from '../../assets/SliderPhoto/First.png'
-import Second from '../../assets/SliderPhoto/Second.png'
-import Third from '../../assets/SliderPhoto/four.jpg'
-
+import First from '../../assets/SliderPhoto/slider (1).jpg'
+import Second from '../../assets/SliderPhoto/slider (2).jpg'
+import Third from '../../assets/SliderPhoto/slider (3).jpg'
+import Four from '../../assets/SliderPhoto/slider (4).jpg'
 export default   [
     {
       title: "First Slide",
@@ -15,5 +15,8 @@ export default   [
       title: "Third Slide",
       urls: Third,
     },
-   
+    {
+      title: "Four Slide",
+      urls: Four,
+    },
   ];

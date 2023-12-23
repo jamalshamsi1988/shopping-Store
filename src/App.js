@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import NotFound from "./components/NotFound";
 import Slider from "./components/slider/Slider";
+import CardsGallery from "./components/shared/midelCards/Cards";
 
 
 
@@ -25,6 +26,7 @@ function App() {
   <Provider store={store}>
         <Navbar />
         <Slider/>
+        <CardsGallery />
         <Routes>
           <Route path="/products" element={<Store/>} />
           <Route path="/*" element={<Navigate to="/products"/>} />
